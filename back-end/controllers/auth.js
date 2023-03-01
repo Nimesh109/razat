@@ -12,7 +12,6 @@ const nodemailer = require("nodemailer");
 
 const register = async (req, res) => {
   try {
-    console.log(req.body);
     //Destructuring the object.
     const { name, email, number, password } = req.body;
 
@@ -36,15 +35,15 @@ const register = async (req, res) => {
         service: "hotmail",
         auth: {
           //Your email
-          user: "hellotest9091@outlook.com",
+          user: `${process.env.EMAIL}`,
           //Your password
-          pass: "aashishdon90",
+          pass: `${process.env.PASSWORD}`,
         },
       });
 
       //Contents of email.
       let mailConfiguration = await transporter.sendMail({
-        from: "hellotest9091@outlook.com",
+        from: `${process.env.EMAIL}`,
         to: `${email}`,
         subject: "Email verifications",
         html: `<h3>Hi! There, You have recently visited
@@ -79,7 +78,7 @@ const verify = async (req, res) => {
     //Storing decoded value in database.
     await registerModel.create({ ...decoded });
 
-    res.redirect(`http://localhost:8000/login.html`);
+    res.redirect(`http://localhost:3000/login`);
   } catch (error) {
     console.log(error);
   }
@@ -107,7 +106,7 @@ const login = async (req, res) => {
       return res.redirect(`http://localhost:3000/`);
     }
     //If not.
-    res.send("Sorry can't login");
+    return res.send("Sorry can't login");
   } catch (error) {
     console.log(error);
   }
@@ -139,15 +138,15 @@ const sendResetPasswordLink = async (req, res) => {
       service: "hotmail",
       auth: {
         //Your email
-        user: "hellotest9091@outlook.com",
+        user: `${process.env.EMAIL}`,
         //Your password
-        pass: "aashishdon90",
+        pass: `${process.env.PASSWORD}`,
       },
     });
 
     //Contents of email.
     let mailConfiguration = await transporter.sendMail({
-      from: "hellotest9091@outlook.com",
+      from: `${process.env.EMAIL}`,
       to: `${email}`,
       subject: "Email verifications",
       html: `<h3>Hi! There, You have recently visited
