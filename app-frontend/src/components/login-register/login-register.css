@@ -1,0 +1,218 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --Primary-Strong-Cyan: hsl(171, 66%, 44%);
+  --Primary-Light-Blue: hsl(233, 100%, 69%);
+  --Secondary-Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Secondary-Grayish-Blue: hsl(201, 11%, 66%);
+  --light-weight: 400;
+  --heavy-weight: 500;
+  --transition: 0.3s ease-in-out all;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 100;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+}
+
+/**
+*Start of main section
+*/
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(241, 150, 90);
+  background: linear-gradient(
+    140deg,
+    rgba(241, 150, 90, 1) 23%,
+    rgba(255, 105, 155, 1) 52%,
+    rgba(214, 117, 181, 1) 66%,
+    rgba(149, 62, 223, 1) 100%
+  );
+}
+
+.auth-first-section {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+}
+
+.register-form {
+  flex-basis: 40%;
+  margin: auto 0px;
+}
+
+.register-form h1 {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+#register-text {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.card-design {
+  flex-basis: 65%;
+}
+
+.register input {
+  width: 250px;
+  height: 40px;
+  margin-top: 5px;
+  padding-left: 50px;
+  background-color: #e9e9e9;
+  border-radius: 10px;
+  border: 1px solid #e9e9e9;
+}
+
+.email-field,
+.password-field,
+.number-field,
+.name-field {
+  position: relative;
+  margin: 10px 0px;
+}
+
+.login-icon {
+  position: absolute;
+  top: 36%;
+  left: 13%;
+}
+
+.login-icon i {
+  font-size: larger;
+}
+
+.register .btn {
+  width: 250px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 10px;
+  background: rgb(241, 150, 90);
+  background: linear-gradient(
+    90deg,
+    rgba(241, 150, 90, 1) 23%,
+    rgba(255, 105, 155, 1) 52%,
+    rgba(214, 117, 181, 1) 73%,
+    rgba(149, 62, 223, 1) 100%
+  );
+}
+
+.forget-pass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.forget-pass a {
+  font-size: 12px;
+  color: var(--Secondary-Dark-Grayish-Blue);
+}
+
+.register-form #reset-pass {
+  margin-left: 0px;
+}
+
+.card-design {
+  position: relative;
+  overflow: hidden;
+}
+
+.u-shaped {
+  background: rgb(213, 19, 129);
+  background: linear-gradient(
+    180deg,
+    rgba(213, 19, 129, 1) 33%,
+    rgba(102, 45, 140, 1) 82%
+  );
+  border-radius: 10px;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  transform: rotate(-40deg);
+}
+
+.card-01 {
+  width: 250px;
+  height: 400px;
+  position: absolute;
+  top: -8%;
+  left: -8%;
+  box-shadow: inset 0 -5px 0px 15px #ffd3ec;
+}
+
+.card-02 {
+  width: 110px;
+  height: 200px;
+  position: absolute;
+  top: 60%;
+  left: -8%;
+}
+
+.card-03 {
+  width: 110px;
+  height: 200px;
+  position: absolute;
+  top: -15%;
+  left: 40%;
+}
+
+.card-04 {
+  width: 110px;
+  height: 180px;
+  position: absolute;
+  bottom: -15%;
+  left: 40%;
+  background: linear-gradient(to top, #eecda3, #ef629f);
+  transform: rotate(130deg);
+}
+
+/**
+*End of main section
+*/
+
+@media screen and (max-width: 830px) {
+  .auth-first-section {
+    width: 80vw;
+  }
+
+  .card-design {
+    display: none;
+  }
+
+  .register-form {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .register-form h1 {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+}

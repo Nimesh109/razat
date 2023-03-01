@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login-register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--Goggle fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--End Goggle fonts link-->
+
+    <!--Font awesome kit-->
+    <script
+      src="https://kit.fontawesome.com/dc954770fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--End of Font awesome kit-->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Start of nav-section-->
+    <nav>
+      <div class="nav-container">
+        <div class="menu-icon">
+          <button class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="links">
+          <a href="index.html" class="link">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
+          <a href="banquet.html" class="link">
+            <i class="fa-solid fa-champagne-glasses"></i> Banquet
+          </a>
+
+          <a href="blog.html" class="link">
+            <i class="fa-solid fa-blog"></i>
+            Blog</a
+          >
+          <a href="features.html" class="link">
+            <i class="fa-solid fa-info"></i>
+            Features</a
+          >
+          <a href="aboutUs.html" class="link">
+            <i class="fa fa-question-circle"></i>
+            About Us
+          </a>
+          <a href="register.html" class="link">
+            <i class="fa-solid fa-address-card"></i>
+            Register
+          </a>
+          <a href="login.html" class="link">
+            <i class="fa-solid fa-user"></i>
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--End of nav-section-->
+
+    <!--Start of main section-->
+    <main>
+      <div class="container">
+        <section class="first-section">
+          <section class="card-design">
+            <section class="u-shaped card-01"></section>
+            <section class="u-shaped card-02"></section>
+            <section class="u-shaped card-03"></section>
+            <section class="u-shaped card-04"></section>
+          </section>
+          <section class="register-form">
+            <h1 id="register-text">Register Account</h1>
+            <form class="register" action="/api/register" method="POST">
+              <div class="name-field">
+                <span class="login-icon"><i class="fa-solid fa-user"></i></span>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Username"
+                />
+              </div>
+
+              <div class="email-field">
+                <span class="login-icon"
+                  ><i class="fa-solid fa-envelope"></i
+                ></span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="number-field">
+                <span class="login-icon"
+                  ><i class="fa-solid fa-phone"></i
+                ></span>
+                <input
+                  type="number"
+                  id="number"
+                  name="number"
+                  placeholder="Number"
+                />
+              </div>
+
+              <div class="password-field">
+                <span class="login-icon"><i class="fa-solid fa-lock"></i></span>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="btn-pass">
+                <button type="submit" class="btn">Register Account</button>
+              </div>
+              <div class="forget-pass">
+                <a href="login.html">Already have an account?</a>
+                <a href="login.html" class="margin-bottom">
+                  Sign In Your Account
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </form>
+            <!--End of form section-->
+          </section>
+        </section>
+      </div>
+    </main>
+    <!--End of main section-->
+    <!--Start of footer section-->
+    <footer>
+      <div class="footer-content">
+        <section class="footer-left">
+          <i
+            class="fa-brands fa-square-pied-piper"
+            style="font-size: 100px"
+          ></i>
+          <p>
+            Rupakot Resort is set on 10 hectares and nearly 1 hour drive from
+            Pokhara Lakeside and airport. Spledid view of Bengnas, Rupa, Fewa
+            lakes, couples of hiking routes, an infinity pool, a world-class
+            spa, Panorama restaurant, exotic bar and much more to explore.
+          </p>
+          <a href="www.facebook.com"
+            ><img src="./images/Facebook_Logo.png.webp" alt="facebook image"
+          /></a>
+          <a href="www.instagram.com"
+            ><img
+              src="./images/Instagram_logo_2016.svg.webp"
+              alt="instagram image"
+          /></a>
+          <a href="www.twitter.com"
+            ><img
+              class="twitter"
+              src="./images/twitter.png"
+              alt="twitter image"
+          /></a>
+        </section>
+        <section class="footer-right">
+          <section class="footer-links">
+            <a href="index.html">The Resort </a>
+            <a href="aboutUs.html">About Us </a>
+            <a href="ourRooms.html">Our Rooms </a>
+            <a href="gallery.html">Our Gallery </a>
+            <a href="packages.html">Packages </a>
+            <br />
+          </section>
+          <section class="footer-text">
+            <p>
+              Reach Us<br />
+              ----------------------------------------
+            </p>
+            <p class="small-text">Powered by: Razat.Lab.Pvt.Ltd</p>
+          </section>
+        </section>
+      </div>
+    </footer>
+    <!--End of footer section-->
+  </body>
+</html>
